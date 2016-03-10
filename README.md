@@ -9,17 +9,9 @@ Table of Content
 
 [3. Pre-requisites](#section3)
 
-[4. Installation & Configuration](#section4)
+[4. Usage](#section4)
 
-[5. Usage](#section5)
-
-[6. Important notes](#section6)
-
-[7. Source code](#section7)
-
-[8. Known limitations](#section8)
-
-[9. References](#section9)
+[5. Important notes](#section5)
 
 ---
 #<a name="section1"></a>1. Introduction
@@ -57,16 +49,12 @@ To connect your PHP application to our API use the mnubo PHP SDK.
 ---
 #<a name="section3"></a>3. Pre-requisites
 
-- PHP 2.7
+- PHP 5.4
+- PHP-CURL
 
 
 ---
-#<a name="section4"></a>4. Installation & Configuration
-
-    pip install mnubo
-
----
-#<a name="section5"></a>5. Usage
+#<a name="section4"></a>4. Usage
 
 ### Initialize the MnuboClient
 
@@ -159,21 +147,3 @@ $response = $mnubo->batch_services->objects('OBJECTS_IN_JSON');
 ```PHP
 $response = $mnubo->batch_services->events('EVENTS_IN_JSON', 'REPORT_RESULTS');
 ```
-
----
-#<a name="section6"></a>6. Important notes
-
-
-
----
-#<a name="section7"></a>7. Source code
-
-
-
----
-#<a name="section8"></a>8. Known limitations
-
-
-
----
-#<a name="section9"></a>9. References
