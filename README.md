@@ -66,7 +66,7 @@ the data modeling guide to format correctly the owner's data structure.
 
 #### Create an Owner
 ```PHP
-$response = $mnubo->owner_services->create('OWNER_IN_JSON');
+$response = $mnubo->owner_services->create($OWNER_as_array);
 ```
 
 #### Claim a Smart Object for an Owner
@@ -76,7 +76,7 @@ $response = $mnubo->owner_services->claim('USERNAME', 'DEVICE_ID');
 
 #### Update an Owner
 ```PHP
-$response = $mnubo->owner_services->update('OWNER_IN_JSON');
+$response = $mnubo->owner_services->update($OWNER_as_array);
 ```
 
 #### Delete an Owner
@@ -90,12 +90,12 @@ the data modeling guide to format correctly the smart object's data structure.
 
 #### Create a Smart Object
 ```PHP
-$response = $mnubo->smart_object_services->create('OBJECT_IN_JSON');
+$response = $mnubo->smart_object_services->create($OBJECT_as_array);
 ```
 
 #### Update a Smart Object
 ```PHP
-$response = $mnubo->smart_object_services->update('OBJECT_IN_JSON');
+$response = $mnubo->smart_object_services->update($OBJECT_as_array);
 ```
 
 #### Delete a Smart Object
@@ -132,16 +132,16 @@ of either the SmartObject or the Owners in the API documentation to format the d
 
 #### Batch Owners
 ```PHP
-$response = $mnubo->batch_services->owners('OWNERS_IN_JSON');
+$response = $mnubo->batch_services->owners($OWNERS_as_array);
 ```
 
 #### Batch Objects
 ```PHP
-$response = $mnubo->batch_services->objects('OBJECTS_IN_JSON');
+$response = $mnubo->batch_services->objects($OBJECTS_as_array);
 ```
 
 #### Batch Events
 'REPORT_RESULTS': is a boolean that specify if a body with the result of each individual event should be returned.
 ```PHP
-$response = $mnubo->batch_services->events('EVENTS_IN_JSON', 'REPORT_RESULTS');
+$response = $mnubo->batch_services->events($EVENT_as_array, 'REPORT_RESULTS');
 ```
