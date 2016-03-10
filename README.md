@@ -71,8 +71,6 @@ To connect your PHP application to our API use the mnubo PHP SDK.
 ### Initialize the MnuboClient
 
 ```PHP
-from mnubo.mnubo_client import MnuboClient
-
 $mnubo = new \Mnubo\Client('CLIENT_ID', 'CLIENT_SECRET', 'HOSTNAME');
 ```
 
@@ -82,22 +80,22 @@ the data modeling guide to format correctly the owner's data structure.
 
 #### Create an Owner
 ```PHP
-response = $mnubo->owner_services->create('OWNER_IN_JSON');
+$response = $mnubo->owner_services->create('OWNER_IN_JSON');
 ```
 
 #### Claim a Smart Object for an Owner
 ```PHP
-response = $mnubo->owner_services->claim('USERNAME', 'DEVICE_ID');
+$response = $mnubo->owner_services->claim('USERNAME', 'DEVICE_ID');
 ```
 
 #### Update an Owner
 ```PHP
-response = $mnubo->owner_services->update('OWNER_IN_JSON');
+$response = $mnubo->owner_services->update('OWNER_IN_JSON');
 ```
 
 #### Delete an Owner
 ```PHP
-response = $mnubo->owner_services->delete('USERNAME');
+$response = $mnubo->owner_services->delete('USERNAME');
 ```
 
 ### Use the Smart Objects Services
@@ -106,17 +104,17 @@ the data modeling guide to format correctly the smart object's data structure.
 
 #### Create a Smart Object
 ```PHP
-response = $mnubo->smart_object_services->create('OBJECT_IN_JSON');
+$response = $mnubo->smart_object_services->create('OBJECT_IN_JSON');
 ```
 
 #### Update a Smart Object
 ```PHP
-response = $mnubo->smart_object_services->update('OBJECT_IN_JSON');
+$response = $mnubo->smart_object_services->update('OBJECT_IN_JSON');
 ```
 
 #### Delete a Smart Object
 ```PHP
-response = $mnubo->smart_object_services->delete('DEVICE_ID');
+$response = $mnubo->smart_object_services->delete('DEVICE_ID');
 ```
 
 ### Use the Event Services
@@ -125,7 +123,7 @@ the data modeling guide to format correctly the event's data structure.
 
 #### Send an Event
 ```PHP
-response = $mnubo->event_services->send('EVENT_IN_JSON');
+$response = $mnubo->event_services->send('EVENT_IN_JSON');
 ```
 
 ### Use the Search Services
@@ -134,12 +132,12 @@ the Search API documentation to format your queries correctly.
 
 #### Search Query
 ```PHP
-response = $mnubo->search_services->search('QUERY');
+$response = $mnubo->search_services->search('QUERY');
 ```
 
 #### Search Datasets Query
 ```PHP
-response = $mnubo->search_services->search_datasets('QUERY');
+$response = $mnubo->search_services->search_datasets('QUERY');
 ```
 
 ### Use the Batch Services
@@ -148,18 +146,18 @@ of either the SmartObject or the Owners in the API documentation to format the d
 
 #### Batch Owners
 ```PHP
-response = $mnubo->batch_services->owners('OWNERS_IN_JSON');
+$response = $mnubo->batch_services->owners('OWNERS_IN_JSON');
 ```
 
 #### Batch Objects
 ```PHP
-response = $mnubo->batch_services->objects('OBJECTS_IN_JSON');
+$response = $mnubo->batch_services->objects('OBJECTS_IN_JSON');
 ```
 
 #### Batch Events
 'REPORT_RESULTS': is a boolean that specify if a body with the result of each individual event should be returned.
 ```PHP
-response = $mnubo->batch_services->events('EVENTS_IN_JSON', 'REPORT_RESULTS');
+$response = $mnubo->batch_services->events('EVENTS_IN_JSON', 'REPORT_RESULTS');
 ```
 
 ---
