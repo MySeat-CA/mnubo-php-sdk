@@ -11,8 +11,6 @@ Table of Content
 
 [4. Usage](#section4)
 
-[5. Important notes](#section5)
-
 ---
 #<a name="section1"></a>1. Introduction
 
